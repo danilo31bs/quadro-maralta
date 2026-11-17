@@ -95,10 +95,5 @@ const MISSOES = [
     "titulo": "O legado do Arquemago",
     "descricao": "Uma torre antiga voltou a emitir sinais de atividade mágica, e moradores das regiões próximas começaram a relatar pesadelos compartilhados e mudanças inexplicáveis de comportamento. A Confraria suspeita que um Arquemago esteja tentando recuperar sua influência. Investigue a torre, descubra a origem dos fenômenos e interrompa seus planos.",
     "nivel": "ouro"
-  },
-  {
-    "titulo": "A queda do senhor de Madrada",
-    "descricao": "Informações sigilosas indicam que uma figura poderosa de Madrada está preparando uma operação para expandir o comércio ilegal de escravos e consolidar seu domínio sobre as rotas do sul. A Confraria não pode intervir abertamente sem colocar milhares de civis em risco. Infiltre-se na cidade, descubra os planos do governante e encontre uma maneira de enfraquecer seu poder sem provocar uma guerra.",
-    "nivel": "ouro"
   }
 ];
