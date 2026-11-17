@@ -3,7 +3,7 @@
 // Níveis aceitos: "cobre", "bronze", "prata", "ouro", "platina".
 // Atenção: mantenha a vírgula entre os blocos e as aspas nos textos.
 
-const MISSOES_NOVAS = [
+const MISSOES = [
   // COBRE
   {
     "titulo": "O carregamento de peixe seco",
