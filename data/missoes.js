@@ -2,80 +2,103 @@
 // Para adicionar uma missão, copie um bloco { ... } e edite os campos.
 // Níveis aceitos: "cobre", "bronze", "prata", "ouro", "platina".
 // Atenção: mantenha a vírgula entre os blocos e as aspas nos textos.
-const MISSOES = [
+
+const MISSOES_NOVAS = [
+  // COBRE
   {
-    "titulo": "Ratos no porão do armazém",
-    "descricao": "Um comerciante do porto reclama de ratos gigantes que estão devorando seus sacos de grãos. Limpe o porão do armazém e descubra de onde eles estão vindo.",
+    "titulo": "O carregamento de peixe seco",
+    "descricao": "Um comerciante de Elmaribo chegou a Maralta com parte de sua carga desaparecida. Investigue o trajeto entre o porto e o mercado e descubra quem está roubando os produtos.",
     "nivel": "cobre"
   },
   {
-    "titulo": "Entrega de cartas ao sul",
-    "descricao": "A Guilda precisa de alguém de confiança para levar um maço de cartas lacradas até um posto de estrada. Evite desvios e não abra os lacres.",
+    "titulo": "Confusão no mercado de Portus",
+    "descricao": "Um vendedor de especiarias acusa outro comerciante de ter roubado sua mercadoria durante o movimento do mercado. Investigue o caso e recupere o pequeno baú desaparecido.",
     "nivel": "cobre"
   },
   {
-    "titulo": "O cão que sumiu",
-    "descricao": "O filho de um curtidor perdeu seu cão de caça nos arredores da cidade. Encontre o animal antes do anoitecer. Há quem diga que lobos andam rondando a região.",
+    "titulo": "Madeira para os construtores",
+    "descricao": "Um grupo de trabalhadores de Maralta precisa buscar uma encomenda de madeira vinda de Korvath, mas animais selvagens estão bloqueando a trilha. Garanta que a carga chegue à cidade.",
     "nivel": "cobre"
   },
   {
-    "titulo": "Goblins no milharal",
-    "descricao": "Um grupo de goblins vem roubando espigas e assustando os camponeses nos campos ao redor da cidade. Afugente-os, de preferência sem destruir a colheita.",
+    "titulo": "O rebanho assustado",
+    "descricao": "Camponeses próximos a Valara relatam que alguma criatura tem assustado seus animais durante a noite. Descubra o que está rondando os pastos e impeça novos ataques.",
     "nivel": "cobre"
   },
   {
-    "titulo": "Ervas para a curandeira",
-    "descricao": "A curandeira local precisa de um cesto de ervas medicinais que só crescem à beira de um brejo próximo. O caminho é lamacento e o brejo não é tão pacífico quanto parece.",
+    "titulo": "Uma mensagem para Salanka",
+    "descricao": "Uma curandeira precisa enviar uma mensagem a um coletor de ervas de Salanka. A viagem é curta, mas a trilha pela floresta está tomada por criaturas territoriais. Entregue a mensagem e retorne com uma resposta.",
     "nivel": "cobre"
   },
   {
-    "titulo": "Barris que não chegam",
-    "descricao": "Uma carroça de cerveja encomendada por uma taverna encalhou na estrada, e o carroceiro está sem coragem de seguir viagem. Descubra o que o assustou e leve a carga até o destino.",
+    "titulo": "O aprendiz desaparecido",
+    "descricao": "Um aprendiz de alquimista de Maralta saiu para buscar materiais nos arredores e não voltou. Encontre o jovem e recupere os ingredientes que ele carregava.",
     "nivel": "cobre"
   },
+
+  // BRONZE
   {
-    "titulo": "Escolta de carroça de carvão",
-    "descricao": "Uma carroça carregada de carvão vinda de Korvath precisa ser escoltada pelos últimos dias de estrada até Maralta. Bandidos têm atacado comboios pequenos.",
+    "titulo": "Contrabando em Porto Problema",
+    "descricao": "Um informante afirma que contrabandistas estão usando uma enseada próxima a Porto Problema para descarregar mercadorias roubadas. Investigue o local, identifique os envolvidos e recupere os produtos antes que desapareçam no mercado negro.",
     "nivel": "bronze"
   },
   {
-    "titulo": "A cripta da capela velha",
-    "descricao": "Barulhos e luzes estranhas vêm da cripta de uma capela abandonada. O sacerdote local suspeita de mortos-vivos e pede que o lugar seja purificado.",
+    "titulo": "A trilha dos saqueadores",
+    "descricao": "Viajantes que cruzam as estradas próximas a Plerus estão sendo atacados por um grupo de saqueadores. Siga os rastros até o esconderijo, recupere os pertences roubados e impeça novos ataques.",
     "nivel": "bronze"
   },
   {
-    "titulo": "Ladrão de sal",
-    "descricao": "Barris de sal de Elmaribo estão sumindo do depósito de um mercador. Investigue os funcionários e as docas e traga o culpado à Guilda, vivo de preferência.",
+    "titulo": "O poço contaminado",
+    "descricao": "Moradores de uma pequena comunidade próxima a Ura começaram a adoecer após consumir água de um poço. Investigue a origem da contaminação e encontre uma forma de tornar a água segura novamente.",
     "nivel": "bronze"
   },
   {
-    "titulo": "Os pescadores desaparecidos",
-    "descricao": "Dois barcos de pesca saíram para o rio e não voltaram. As famílias pedem que alguém siga o curso da água e descubra o que aconteceu com as tripulações.",
+    "titulo": "Ecos sob a capela",
+    "descricao": "Uma antiga capela nos arredores de Maralta apresenta sinais de atividade durante a madrugada. Moradores afirmam ouvir vozes e passos vindos do subsolo. Investigue as ruínas e descubra quem está usando o local.",
     "nivel": "bronze"
   },
   {
-    "titulo": "Mercenários sem contrato",
-    "descricao": "Um grupo de mercenários de Vyrn acampou perto da cidade e vem extorquindo viajantes. Negocie, intimide ou expulse-os, mas evite um conflito aberto com Vyrn.",
+    "titulo": "A caravana de Nerion",
+    "descricao": "Uma caravana transportando ferramentas e peças de metal de Nerion precisa atravessar uma região conhecida por ataques de monstros. Escolte os comerciantes e garanta que os materiais cheguem ao destino.",
+    "nivel": "bronze"
+  },
+  {
+    "titulo": "O falsificador de documentos",
+    "descricao": "Documentos falsos estão sendo usados para permitir a passagem de mercadorias pelo controle de Valara. Descubra quem está produzindo os papéis e apresente provas à autoridade local.",
+    "nivel": "bronze"
+  },
+
+  // PRATA
+  {
+    "titulo": "Cultistas entre os moradores",
+    "descricao": "Moradores de uma vila próxima a uma antiga torre começaram a agir de maneira estranha, repetindo frases e obedecendo a ordens de uma pessoa desconhecida. Investigue a comunidade e descubra se a influência de um Arquemago está por trás do comportamento.",
     "nivel": "prata"
   },
   {
-    "titulo": "Vozes na mina abandonada",
-    "descricao": "Uma antiga mina fora das rotas de Istan foi reaberta por mineiros fugitivos, que agora relatam vozes vindas das paredes. Descubra o que há no fundo e traga os sobreviventes.",
+    "titulo": "A disputa pelas águas",
+    "descricao": "Duas comunidades próximas à Grande Serpente estão prestes a entrar em conflito pelo controle de uma passagem utilizada por pescadores e comerciantes. Investigue as acusações de ambos os lados e encontre uma solução antes que a situação termine em violência.",
     "nivel": "prata"
   },
   {
-    "titulo": "Panfletos da Confraria",
-    "descricao": "Panfletos prometendo liberdade e igualdade começaram a circular nas tavernas. A Guilda quer saber quem os distribui e quem os financia, sem alarde e sem prisões precipitadas.",
+    "titulo": "O esconderijo dos escravistas",
+    "descricao": "Informações indicam que uma organização criminosa está capturando pessoas nas estradas do sul e transportando-as clandestinamente para Madrada. Localize o esconderijo, liberte os prisioneiros e reúna provas contra os responsáveis.",
     "nivel": "prata"
   },
   {
-    "titulo": "Os cinco mercadores de Eryndor",
-    "descricao": "Cinco famílias mercantes de Eryndor contrataram a Guilda para recuperar um carregamento de joias tomado em uma emboscada às margens da Grande Serpente. Nem todos os contratantes estão sendo honestos.",
+    "titulo": "O artefato de Medria",
+    "descricao": "Um pesquisador de Medria perdeu contato com sua equipe após encontrar um artefato mágico em uma área de escavação. Viaje até o local, descubra o que aconteceu e recupere o objeto antes que seus efeitos se espalhem.",
+    "nivel": "prata"
+  },
+
+  // OURO
+  {
+    "titulo": "O legado do Arquemago",
+    "descricao": "Uma torre antiga voltou a emitir sinais de atividade mágica, e moradores das regiões próximas começaram a relatar pesadelos compartilhados e mudanças inexplicáveis de comportamento. A Confraria suspeita que um Arquemago esteja tentando recuperar sua influência. Investigue a torre, descubra a origem dos fenômenos e interrompa seus planos.",
     "nivel": "ouro"
   },
   {
-    "titulo": "Sombras sobre a ponte",
-    "descricao": "Agentes da Confraria cruzaram a Grande Serpente com algo escondido em uma caravana. Encontre a carga antes que chegue ao destino e descubra qual é o plano.",
+    "titulo": "A queda do senhor de Madrada",
+    "descricao": "Informações sigilosas indicam que uma figura poderosa de Madrada está preparando uma operação para expandir o comércio ilegal de escravos e consolidar seu domínio sobre as rotas do sul. A Confraria não pode intervir abertamente sem colocar milhares de civis em risco. Infiltre-se na cidade, descubra os planos do governante e encontre uma maneira de enfraquecer seu poder sem provocar uma guerra.",
     "nivel": "ouro"
   }
 ];
