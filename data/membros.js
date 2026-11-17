@@ -23,7 +23,7 @@ const MEMBROS = [
   { "nome": "Gangral", "classe": "Guerreiro", "meritos": 1000 },
   { "nome": "Gorukan", "classe": "Barbaro", "meritos": 5700 },
   { "nome": "Gunther", "classe": "Paladino", "meritos": 5800 },
-  { "nome": "Horácio", "classe": "Guerreiro", "meritos": 5900 },
+  { "nome": "Horácio", "classe": "Guerreiro", "meritos": 41510 },
   { "nome": "Jaina Praundmore", "classe": "Mago", "meritos": 40000 },
   { "nome": "Julião", "classe": "Mago", "meritos": 13000 },
   { "nome": "Limeric Usnition", "classe": "Guerreiro", "meritos": 1353 },
