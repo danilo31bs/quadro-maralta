@@ -1,0 +1,117 @@
+:root {
+  --madeira: #2b1d14;
+  --madeira-clara: #3d2a1c;
+  --pergaminho: #f1e4c6;
+  --pergaminho-sombra: #d9c799;
+  --tinta: #2a1b10;
+  --dourado-texto: #e6c779;
+
+  --cobre: #b0643a;
+  --bronze: #8c6a3c;
+  --prata: #8b95a1;
+  --ouro: #d4a52a;
+  --platina: #5aa8b5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    repeating-linear-gradient(90deg, rgba(0,0,0,.12) 0 2px, transparent 2px 120px),
+    linear-gradient(var(--madeira), var(--madeira-clara));
+  color: var(--tinta);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.5;
+}
+
+.cabecalho {
+  text-align: center;
+  padding: 3rem 1rem 1.5rem;
+  color: var(--dourado-texto);
+}
+.cabecalho__sobretitulo {
+  margin: 0;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  font-size: .85rem;
+}
+.cabecalho h1 {
+  margin: .4rem 0;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  text-shadow: 0 2px 0 #000;
+}
+.cabecalho__sub { margin: 0; font-style: italic; opacity: .85; }
+
+.quadro {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+}
+
+.nivel { margin-top: 2.5rem; }
+.nivel__titulo {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: .3rem 1rem;
+  font-size: 1.2rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 3px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.6);
+}
+.nivel--cobre .nivel__titulo   { background: var(--cobre); }
+.nivel--bronze .nivel__titulo  { background: var(--bronze); }
+.nivel--prata .nivel__titulo   { background: var(--prata); }
+.nivel--ouro .nivel__titulo    { background: var(--ouro); color: #2a1b10; text-shadow: none; }
+.nivel--platina .nivel__titulo { background: var(--platina); }
+
+.nivel__lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.missao {
+  position: relative;
+  padding: 1.4rem 1.2rem 1.2rem;
+  background: var(--pergaminho);
+  border-top: 6px solid var(--cor, var(--bronze));
+  box-shadow: 3px 4px 0 var(--pergaminho-sombra), 0 8px 16px rgba(0,0,0,.4);
+}
+/* tachinha */
+.missao::before {
+  content: "";
+  position: absolute;
+  top: -10px; left: 50%;
+  width: 14px; height: 14px;
+  margin-left: -7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #e66, #8a1c1c);
+  box-shadow: 0 2px 3px rgba(0,0,0,.5);
+}
+.missao--cobre   { --cor: var(--cobre); }
+.missao--bronze  { --cor: var(--bronze); }
+.missao--prata   { --cor: var(--prata); }
+.missao--ouro    { --cor: var(--ouro); }
+.missao--platina { --cor: var(--platina); }
+
+.missao__titulo { margin: 0 0 .5rem; font-size: 1.15rem; }
+.missao__descricao { margin: 0; font-size: .98rem; }
+
+.aviso {
+  padding: 1rem;
+  background: var(--pergaminho);
+  border-radius: 4px;
+}
+.aviso code { background: rgba(0,0,0,.08); padding: 0 .3em; }
+
+.rodape {
+  text-align: center;
+  padding: 1.5rem 1rem 2.5rem;
+  color: var(--dourado-texto);
+  font-style: italic;
+  opacity: .8;
+}

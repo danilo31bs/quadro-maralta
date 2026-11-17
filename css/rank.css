@@ -1,0 +1,88 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+  margin-top: 1.25rem;
+}
+.menu a {
+  padding: .35rem 1rem;
+  color: var(--dourado-texto);
+  text-decoration: none;
+  border: 1px solid rgba(230, 199, 121, .4);
+  border-radius: 3px;
+  font-size: .95rem;
+}
+.menu a[aria-current="page"] {
+  background: var(--dourado-texto);
+  color: var(--madeira);
+}
+
+.rank {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--pergaminho);
+  box-shadow: 3px 4px 0 var(--pergaminho-sombra), 0 8px 16px rgba(0,0,0,.4);
+}
+.tabela th {
+  padding: .8rem .9rem;
+  text-align: left;
+  font-size: .85rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  background: var(--madeira-clara);
+  color: var(--dourado-texto);
+}
+.tabela td {
+  padding: .75rem .9rem;
+  border-bottom: 1px solid var(--pergaminho-sombra);
+}
+.tabela tbody tr:last-child td { border-bottom: 0; }
+
+.linha { border-left: 6px solid var(--cor, var(--bronze)); }
+.linha--cobre   { --cor: var(--cobre); }
+.linha--bronze  { --cor: var(--bronze); }
+.linha--prata   { --cor: var(--prata); }
+.linha--ouro    { --cor: var(--ouro); }
+.linha--platina { --cor: var(--platina); }
+.linha--obsidiana { --cor: #6a4fa3; }
+
+.col-pos { width: 3rem; text-align: center; font-weight: bold; }
+.col-nome { font-weight: bold; }
+.col-meritos { text-align: right; font-variant-numeric: tabular-nums; }
+.col-nivel { text-align: right; }
+th.col-pos { text-align: center; }
+th.col-meritos, th.col-nivel { text-align: right; }
+
+.selo {
+  display: inline-block;
+  min-width: 5.5rem;
+  padding: .15rem .7rem;
+  border-radius: 3px;
+  text-align: center;
+  font-size: .8rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.6);
+  background: var(--cor, var(--bronze));
+}
+.selo--cobre   { background: var(--cobre); }
+.selo--bronze  { background: var(--bronze); }
+.selo--prata   { background: var(--prata); }
+.selo--ouro    { background: var(--ouro); color: #2a1b10; text-shadow: none; }
+.selo--platina { background: var(--platina); }
+.selo--obsidiana {
+  background: linear-gradient(135deg, #0d0b14, #2a2142);
+  box-shadow: 0 0 0 1px #6a4fa3 inset;
+}
+
+@media (max-width: 600px) {
+  .tabela th, .tabela td { padding: .6rem .5rem; font-size: .9rem; }
+  .col-classe { display: none; }
+}

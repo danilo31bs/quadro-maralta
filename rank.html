@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rank da Guilda – Aventureiros de Maralta</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/rank.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <p class="cabecalho__sobretitulo">Guilda de Aventureiros de Maralta</p>
+    <h1>Rank da Guilda</h1>
+    <p class="cabecalho__sub">Membros por méritos · Ano 439 da Era da Liberdade</p>
+    <nav class="menu">
+      <a href="index.html">Quadro de Missões</a>
+      <a href="rank.html" aria-current="page">Rank da Guilda</a>
+    </nav>
+  </header>
+
+  <main class="rank">
+    <table class="tabela">
+      <thead>
+        <tr>
+          <th class="col-pos">#</th>
+          <th class="col-nome">Nome</th>
+          <th class="col-classe">Classe</th>
+          <th class="col-meritos">Méritos</th>
+          <th class="col-nivel">Rank</th>
+        </tr>
+      </thead>
+      <tbody id="rank-corpo">
+        <tr><td colspan="5" class="aviso">Carregando membros…</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="rodape">
+    <p>O rank sobe conforme os méritos acumulados em missões para a Guilda.</p>
+  </footer>
+
+  <script src="data/membros.js"></script>
+  <script src="js/rank.js"></script>
+</body>
+</html>
